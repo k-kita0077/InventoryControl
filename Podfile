@@ -8,6 +8,6 @@ target 'InventoryControl' do
   # Pods for InventoryControl
   pod 'Firebase/Core'
   pod 'Firebase/Auth'
-
+  pod 'Firebase/Database'
 
 end

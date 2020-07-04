@@ -3,11 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		2BDC19BD44265900F3F7BFAC /* Pods_InventoryControl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 076569E22A321350E722CEF7 /* Pods_InventoryControl.framework */; };
+		794DD5E424AF3E7900B57C98 /* GoodsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794DD5E224AF3E7900B57C98 /* GoodsTableViewCell.swift */; };
+		794DD5E524AF3E7900B57C98 /* GoodsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 794DD5E324AF3E7900B57C98 /* GoodsTableViewCell.xib */; };
 		79A22EC424AB7F89002A4EBE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A22EC324AB7F89002A4EBE /* AppDelegate.swift */; };
 		79A22EC624AB7F89002A4EBE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A22EC524AB7F89002A4EBE /* SceneDelegate.swift */; };
 		79A22EC824AB7F89002A4EBE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A22EC724AB7F89002A4EBE /* ViewController.swift */; };
@@ -15,11 +17,21 @@
 		79A22ECD24AB7F8B002A4EBE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79A22ECC24AB7F8B002A4EBE /* Assets.xcassets */; };
 		79A22ED024AB7F8B002A4EBE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79A22ECE24AB7F8B002A4EBE /* LaunchScreen.storyboard */; };
 		79A22ED824AB7FF9002A4EBE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 79A22ED724AB7FF9002A4EBE /* GoogleService-Info.plist */; };
+		79A22EDD24AB85A0002A4EBE /* IndexViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A22EDC24AB85A0002A4EBE /* IndexViewController.swift */; };
+		79A22EE024AB8740002A4EBE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A22EDE24AB8740002A4EBE /* LoginViewController.swift */; };
+		79A22EE124AB8740002A4EBE /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79A22EDF24AB8740002A4EBE /* LoginViewController.xib */; };
+		79A22EE324ABA616002A4EBE /* AccountManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A22EE224ABA616002A4EBE /* AccountManager.swift */; };
+		79A22EE524ABAFAE002A4EBE /* MyQRCodeReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A22EE424ABAFAE002A4EBE /* MyQRCodeReader.swift */; };
+		79A22EED24ABC204002A4EBE /* ScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A22EEC24ABC204002A4EBE /* ScanViewController.swift */; };
+		79A4D41924AC825C0017C508 /* EntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A4D41724AC825C0017C508 /* EntryViewController.swift */; };
+		79A4D41A24AC825C0017C508 /* EntryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79A4D41824AC825C0017C508 /* EntryViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		076569E22A321350E722CEF7 /* Pods_InventoryControl.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InventoryControl.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4189254DE4FE952FB758CA75 /* Pods-InventoryControl.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InventoryControl.release.xcconfig"; path = "Target Support Files/Pods-InventoryControl/Pods-InventoryControl.release.xcconfig"; sourceTree = "<group>"; };
+		794DD5E224AF3E7900B57C98 /* GoodsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodsTableViewCell.swift; sourceTree = "<group>"; };
+		794DD5E324AF3E7900B57C98 /* GoodsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GoodsTableViewCell.xib; sourceTree = "<group>"; };
 		79A22EC024AB7F89002A4EBE /* InventoryControl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InventoryControl.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79A22EC324AB7F89002A4EBE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		79A22EC524AB7F89002A4EBE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -29,6 +41,14 @@
 		79A22ECF24AB7F8B002A4EBE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		79A22ED124AB7F8B002A4EBE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		79A22ED724AB7FF9002A4EBE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		79A22EDC24AB85A0002A4EBE /* IndexViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndexViewController.swift; sourceTree = "<group>"; };
+		79A22EDE24AB8740002A4EBE /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		79A22EDF24AB8740002A4EBE /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		79A22EE224ABA616002A4EBE /* AccountManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountManager.swift; sourceTree = "<group>"; };
+		79A22EE424ABAFAE002A4EBE /* MyQRCodeReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyQRCodeReader.swift; sourceTree = "<group>"; };
+		79A22EEC24ABC204002A4EBE /* ScanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanViewController.swift; sourceTree = "<group>"; };
+		79A4D41724AC825C0017C508 /* EntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryViewController.swift; sourceTree = "<group>"; };
+		79A4D41824AC825C0017C508 /* EntryViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = EntryViewController.xib; path = ../Controller/EntryViewController.xib; sourceTree = "<group>"; };
 		903E4A38D2BD69C7FE5CCDD8 /* Pods-InventoryControl.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InventoryControl.debug.xcconfig"; path = "Target Support Files/Pods-InventoryControl/Pods-InventoryControl.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -58,7 +78,6 @@
 				903E4A38D2BD69C7FE5CCDD8 /* Pods-InventoryControl.debug.xcconfig */,
 				4189254DE4FE952FB758CA75 /* Pods-InventoryControl.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -83,16 +102,50 @@
 		79A22EC224AB7F89002A4EBE /* InventoryControl */ = {
 			isa = PBXGroup;
 			children = (
+				79A22EC924AB7F89002A4EBE /* Main.storyboard */,
+				79A22EDB24AB846D002A4EBE /* Model */,
+				79A22EDA24AB8459002A4EBE /* Controller */,
+				79A22ED924AB844B002A4EBE /* View */,
+				79A22ECC24AB7F8B002A4EBE /* Assets.xcassets */,
 				79A22EC324AB7F89002A4EBE /* AppDelegate.swift */,
 				79A22EC524AB7F89002A4EBE /* SceneDelegate.swift */,
-				79A22EC724AB7F89002A4EBE /* ViewController.swift */,
-				79A22EC924AB7F89002A4EBE /* Main.storyboard */,
-				79A22ECC24AB7F8B002A4EBE /* Assets.xcassets */,
 				79A22ECE24AB7F8B002A4EBE /* LaunchScreen.storyboard */,
 				79A22ED724AB7FF9002A4EBE /* GoogleService-Info.plist */,
 				79A22ED124AB7F8B002A4EBE /* Info.plist */,
 			);
 			path = InventoryControl;
+			sourceTree = "<group>";
+		};
+		79A22ED924AB844B002A4EBE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				794DD5E224AF3E7900B57C98 /* GoodsTableViewCell.swift */,
+				794DD5E324AF3E7900B57C98 /* GoodsTableViewCell.xib */,
+				79A4D41824AC825C0017C508 /* EntryViewController.xib */,
+				79A22EDF24AB8740002A4EBE /* LoginViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		79A22EDA24AB8459002A4EBE /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				79A22EDE24AB8740002A4EBE /* LoginViewController.swift */,
+				79A22EC724AB7F89002A4EBE /* ViewController.swift */,
+				79A4D41724AC825C0017C508 /* EntryViewController.swift */,
+				79A22EEC24ABC204002A4EBE /* ScanViewController.swift */,
+				79A22EDC24AB85A0002A4EBE /* IndexViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		79A22EDB24AB846D002A4EBE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				79A22EE224ABA616002A4EBE /* AccountManager.swift */,
+				79A22EE424ABAFAE002A4EBE /* MyQRCodeReader.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -155,10 +208,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79A22EE124AB8740002A4EBE /* LoginViewController.xib in Resources */,
 				79A22ED024AB7F8B002A4EBE /* LaunchScreen.storyboard in Resources */,
 				79A22ED824AB7FF9002A4EBE /* GoogleService-Info.plist in Resources */,
 				79A22ECD24AB7F8B002A4EBE /* Assets.xcassets in Resources */,
 				79A22ECB24AB7F89002A4EBE /* Main.storyboard in Resources */,
+				794DD5E524AF3E7900B57C98 /* GoodsTableViewCell.xib in Resources */,
+				79A4D41A24AC825C0017C508 /* EntryViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -214,6 +270,13 @@
 				79A22EC824AB7F89002A4EBE /* ViewController.swift in Sources */,
 				79A22EC424AB7F89002A4EBE /* AppDelegate.swift in Sources */,
 				79A22EC624AB7F89002A4EBE /* SceneDelegate.swift in Sources */,
+				79A22EE024AB8740002A4EBE /* LoginViewController.swift in Sources */,
+				79A22EDD24AB85A0002A4EBE /* IndexViewController.swift in Sources */,
+				79A4D41924AC825C0017C508 /* EntryViewController.swift in Sources */,
+				79A22EE524ABAFAE002A4EBE /* MyQRCodeReader.swift in Sources */,
+				79A22EE324ABA616002A4EBE /* AccountManager.swift in Sources */,
+				794DD5E424AF3E7900B57C98 /* GoodsTableViewCell.swift in Sources */,
+				79A22EED24ABC204002A4EBE /* ScanViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
