@@ -63,8 +63,9 @@ class EntryViewController: UIViewController {
     @IBAction func tapEntryButton(_ sender: Any) {
         if !(goodsList?.isEmpty ?? true) {
             guard let updateKey = goodsList?[3] else {return}
+            guard let sku = goodsList?[2] else {return}
             if let goods = goodsField.text, let val = valField.text, let inputCode = codeLabel.text {
-                let goodsData = ["SKU": SKUnum, "goods": goods, "code": inputCode, "val": val, "key": updateKey] as [String : Any]
+                let goodsData = ["SKU": sku, "goods": goods, "code": inputCode, "val": val, "key": updateKey] as [String : Any]
                 
                 databaseRef.child(AccountManager.LoginUid).child(updateKey as! String).setValue(goodsData)
                 
@@ -72,13 +73,14 @@ class EntryViewController: UIViewController {
                 valField.text = ""
                 code = ""
                 
-                let vc = tabBarController?.viewControllers?[0];
-                tabBarController?.selectedViewController = vc
+                self.navigationController?.popViewController(animated: true)
+//                let vc = tabBarController?.viewControllers?[0];
+//                tabBarController?.selectedViewController = vc
             }
         } else {
             guard let key = databaseRef.child(AccountManager.LoginUid).childByAutoId().key else { return }
             if let goods = goodsField.text, let val = valField.text, let inputCode = codeLabel.text {
-                let goodsData = ["SKU": SKUnum, "goods": goods, "code": inputCode, "val": val, "key": key] as [String : Any]
+                let goodsData = ["SKU": String(SKUnum), "goods": goods, "code": inputCode, "val": val, "key": key]
                 
                 databaseRef.child(AccountManager.LoginUid).child(key).setValue(goodsData)
                 

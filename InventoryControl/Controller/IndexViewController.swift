@@ -24,6 +24,15 @@ class IndexViewController: UIViewController, UITableViewDelegate, UITableViewDat
 
         databaseRef = Database.database().reference()
         
+        
+        
+        indexViewTableView.delegate = self
+        indexViewTableView.dataSource = self
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         configureTableViewCell()
         
         let userRef = databaseRef.child(AccountManager.LoginUid)
@@ -39,15 +48,6 @@ class IndexViewController: UIViewController, UITableViewDelegate, UITableViewDat
             }
             self.indexViewTableView.reloadData()
         })
-        
-        indexViewTableView.delegate = self
-        indexViewTableView.dataSource = self
-        
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -83,7 +83,9 @@ class IndexViewController: UIViewController, UITableViewDelegate, UITableViewDat
             (ctxAction, view, completionHandler) in
             let key = self.goodsList[indexPath.row][3] as! String
             self.databaseRef.child(AccountManager.LoginUid).child(key).removeValue()
-            //tableView.deleteRows(at: [indexPath], with: .automatic)
+            
+            self.goodsList.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .automatic)
             completionHandler(true)
         }
         // 削除ボタンのデザインを設定する
