@@ -8,19 +8,35 @@
 
 import UIKit
 import AVFoundation
+import FirebaseDatabase
+
 
 class ScanViewController: UIViewController {
     
     let myQRCodeReader = MyQRCodeReader()
     
+    var databaseRef: DatabaseReference!
+    var codeList:[AnyObject]!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        databaseRef = Database.database().reference()
+        
+        
         myQRCodeReader.delegate = self
         myQRCodeReader.setupCamera(view:self.view)
         //読み込めるカメラ範囲
         myQRCodeReader.readRange()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+    }
 }
+
+
 
 extension ScanViewController: AVCaptureMetadataOutputObjectsDelegate {
     //対象を認識、読み込んだ時に呼ばれる
@@ -32,12 +48,13 @@ extension ScanViewController: AVCaptureMetadataOutputObjectsDelegate {
             myQRCodeReader.qrView.frame = barCode.bounds
             //QRデータを表示
             if let str = metadata.stringValue {
-                showActionSheet(str: str)
+                showActionSheet(str)
             }
         }
     }
     
-    func showActionSheet(str: String) {
+    func showActionSheet(_ str: String) {
+    
         let actionSheet = UIAlertController(title: "Code", message: str, preferredStyle: UIAlertController.Style.actionSheet)
         
         let action1 = UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: {
