@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2BDC19BD44265900F3F7BFAC /* Pods_InventoryControl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 076569E22A321350E722CEF7 /* Pods_InventoryControl.framework */; };
+		79389C8B24C080B500183846 /* GoodsInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79389C8A24C080B500183846 /* GoodsInfo.swift */; };
 		794DD5E424AF3E7900B57C98 /* GoodsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794DD5E224AF3E7900B57C98 /* GoodsTableViewCell.swift */; };
 		794DD5E524AF3E7900B57C98 /* GoodsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 794DD5E324AF3E7900B57C98 /* GoodsTableViewCell.xib */; };
 		79A22EC424AB7F89002A4EBE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A22EC324AB7F89002A4EBE /* AppDelegate.swift */; };
@@ -30,6 +31,7 @@
 /* Begin PBXFileReference section */
 		076569E22A321350E722CEF7 /* Pods_InventoryControl.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InventoryControl.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4189254DE4FE952FB758CA75 /* Pods-InventoryControl.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InventoryControl.release.xcconfig"; path = "Target Support Files/Pods-InventoryControl/Pods-InventoryControl.release.xcconfig"; sourceTree = "<group>"; };
+		79389C8A24C080B500183846 /* GoodsInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodsInfo.swift; sourceTree = "<group>"; };
 		794DD5E224AF3E7900B57C98 /* GoodsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodsTableViewCell.swift; sourceTree = "<group>"; };
 		794DD5E324AF3E7900B57C98 /* GoodsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GoodsTableViewCell.xib; sourceTree = "<group>"; };
 		79A22EC024AB7F89002A4EBE /* InventoryControl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InventoryControl.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -48,7 +50,7 @@
 		79A22EE424ABAFAE002A4EBE /* MyQRCodeReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyQRCodeReader.swift; sourceTree = "<group>"; };
 		79A22EEC24ABC204002A4EBE /* ScanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanViewController.swift; sourceTree = "<group>"; };
 		79A4D41724AC825C0017C508 /* EntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryViewController.swift; sourceTree = "<group>"; };
-		79A4D41824AC825C0017C508 /* EntryViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = EntryViewController.xib; path = ../Controller/EntryViewController.xib; sourceTree = "<group>"; };
+		79A4D41824AC825C0017C508 /* EntryViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EntryViewController.xib; sourceTree = "<group>"; };
 		903E4A38D2BD69C7FE5CCDD8 /* Pods-InventoryControl.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InventoryControl.debug.xcconfig"; path = "Target Support Files/Pods-InventoryControl/Pods-InventoryControl.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -81,6 +83,42 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		790C8E6924C057980005ADD4 /* LoginView */ = {
+			isa = PBXGroup;
+			children = (
+				79A22EDE24AB8740002A4EBE /* LoginViewController.swift */,
+				79A22EDF24AB8740002A4EBE /* LoginViewController.xib */,
+			);
+			path = LoginView;
+			sourceTree = "<group>";
+		};
+		790C8E6A24C057A50005ADD4 /* EntryView */ = {
+			isa = PBXGroup;
+			children = (
+				79A4D41724AC825C0017C508 /* EntryViewController.swift */,
+				79A4D41824AC825C0017C508 /* EntryViewController.xib */,
+			);
+			path = EntryView;
+			sourceTree = "<group>";
+		};
+		790C8E6B24C057B70005ADD4 /* ScanView */ = {
+			isa = PBXGroup;
+			children = (
+				79A22EEC24ABC204002A4EBE /* ScanViewController.swift */,
+			);
+			path = ScanView;
+			sourceTree = "<group>";
+		};
+		790C8E6C24C0580B0005ADD4 /* IndexView */ = {
+			isa = PBXGroup;
+			children = (
+				79A22EDC24AB85A0002A4EBE /* IndexViewController.swift */,
+				794DD5E224AF3E7900B57C98 /* GoodsTableViewCell.swift */,
+				794DD5E324AF3E7900B57C98 /* GoodsTableViewCell.xib */,
+			);
+			path = IndexView;
+			sourceTree = "<group>";
+		};
 		79A22EB724AB7F89002A4EBE = {
 			isa = PBXGroup;
 			children = (
@@ -105,10 +143,14 @@
 				79A22EC924AB7F89002A4EBE /* Main.storyboard */,
 				79A22EDB24AB846D002A4EBE /* Model */,
 				79A22EDA24AB8459002A4EBE /* Controller */,
-				79A22ED924AB844B002A4EBE /* View */,
+				79A22ED924AB844B002A4EBE /* Main */,
+				790C8E6C24C0580B0005ADD4 /* IndexView */,
+				790C8E6B24C057B70005ADD4 /* ScanView */,
+				790C8E6A24C057A50005ADD4 /* EntryView */,
+				790C8E6924C057980005ADD4 /* LoginView */,
 				79A22ECC24AB7F8B002A4EBE /* Assets.xcassets */,
-				79A22EC324AB7F89002A4EBE /* AppDelegate.swift */,
 				79A22EC524AB7F89002A4EBE /* SceneDelegate.swift */,
+				79A22EC324AB7F89002A4EBE /* AppDelegate.swift */,
 				79A22ECE24AB7F8B002A4EBE /* LaunchScreen.storyboard */,
 				79A22ED724AB7FF9002A4EBE /* GoogleService-Info.plist */,
 				79A22ED124AB7F8B002A4EBE /* Info.plist */,
@@ -116,25 +158,18 @@
 			path = InventoryControl;
 			sourceTree = "<group>";
 		};
-		79A22ED924AB844B002A4EBE /* View */ = {
+		79A22ED924AB844B002A4EBE /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				794DD5E224AF3E7900B57C98 /* GoodsTableViewCell.swift */,
-				794DD5E324AF3E7900B57C98 /* GoodsTableViewCell.xib */,
-				79A4D41824AC825C0017C508 /* EntryViewController.xib */,
-				79A22EDF24AB8740002A4EBE /* LoginViewController.xib */,
+				79A22EC724AB7F89002A4EBE /* ViewController.swift */,
 			);
-			path = View;
+			path = Main;
 			sourceTree = "<group>";
 		};
 		79A22EDA24AB8459002A4EBE /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				79A22EDE24AB8740002A4EBE /* LoginViewController.swift */,
-				79A22EC724AB7F89002A4EBE /* ViewController.swift */,
-				79A4D41724AC825C0017C508 /* EntryViewController.swift */,
-				79A22EEC24ABC204002A4EBE /* ScanViewController.swift */,
-				79A22EDC24AB85A0002A4EBE /* IndexViewController.swift */,
+				79A22EE424ABAFAE002A4EBE /* MyQRCodeReader.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -143,7 +178,7 @@
 			isa = PBXGroup;
 			children = (
 				79A22EE224ABA616002A4EBE /* AccountManager.swift */,
-				79A22EE424ABAFAE002A4EBE /* MyQRCodeReader.swift */,
+				79389C8A24C080B500183846 /* GoodsInfo.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -271,6 +306,7 @@
 				79A22EC424AB7F89002A4EBE /* AppDelegate.swift in Sources */,
 				79A22EC624AB7F89002A4EBE /* SceneDelegate.swift in Sources */,
 				79A22EE024AB8740002A4EBE /* LoginViewController.swift in Sources */,
+				79389C8B24C080B500183846 /* GoodsInfo.swift in Sources */,
 				79A22EDD24AB85A0002A4EBE /* IndexViewController.swift in Sources */,
 				79A4D41924AC825C0017C508 /* EntryViewController.swift in Sources */,
 				79A22EE524ABAFAE002A4EBE /* MyQRCodeReader.swift in Sources */,
@@ -421,6 +457,7 @@
 			baseConfigurationReference = 903E4A38D2BD69C7FE5CCDD8 /* Pods-InventoryControl.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DMQQTCMXC8;
 				INFOPLIST_FILE = InventoryControl/Info.plist;
@@ -428,8 +465,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.ak2205d.InventoryControl;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ak2205d.TestSpeech;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -440,6 +478,7 @@
 			baseConfigurationReference = 4189254DE4FE952FB758CA75 /* Pods-InventoryControl.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DMQQTCMXC8;
 				INFOPLIST_FILE = InventoryControl/Info.plist;
@@ -447,8 +486,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.ak2205d.InventoryControl;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ak2205d.TestSpeech;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
