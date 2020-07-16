@@ -20,6 +20,7 @@ class IndexViewController: UIViewController, UITableViewDelegate, UITableViewDat
     var databaseRef: DatabaseReference!
     
     var goodsList: [GoodsInfo] = []
+    var imageList: [StorageReference] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,8 +48,28 @@ class IndexViewController: UIViewController, UITableViewDelegate, UITableViewDat
                     self.goodsList.append(goodsInfo)
                 }
             }
-            self.indexViewTableView.reloadData()
+            //self.indexViewTableView.reloadData()
+            self.downloadImage(goodsList: self.goodsList, completion: { list in
+                self.imageList = list
+                self.indexViewTableView.reloadData()
+            })
+            
         })
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        goodsList = []
+        imageList = []
+    }
+    
+    
+    func downloadImage(goodsList: [GoodsInfo],completion: ([StorageReference]) -> Void) {
+        var list: [StorageReference] = []
+        for item in goodsList {
+            let userRef = self.getUserRef(item.SKU)
+            list.append(userRef)
+        }
+        completion(list)
     }
     
     
@@ -59,12 +80,16 @@ class IndexViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "GoodsID", for: indexPath) as! GoodsTableViewCell
-        cell.goodsLabel.text = goodsList[indexPath.row].goods
-        cell.valLabel.text = goodsList[indexPath.row].val
+        cell.goodsLabel.text = self.goodsList[indexPath.row].goods
+        cell.valLabel.text = self.goodsList[indexPath.row].val
         
-        let userRef = self.getUserRef(goodsList[indexPath.row].SKU)
+        //let userRef = self.getUserRef(self.goodsList[indexPath.row].SKU)
         let placeholderImage = UIImage(systemName: "photo")
-        cell.cellImage.sd_setImage(with: userRef, placeholderImage: placeholderImage)
+        print("調査")
+        //print(userRef)
+        print(imageList[indexPath.row])
+        cell.cellImage.sd_setImage(with: imageList[indexPath.row], placeholderImage: placeholderImage)
+        //cell.cellImage.sd_setImage(with: userRef, placeholderImage: placeholderImage)
         return cell
     }
     
